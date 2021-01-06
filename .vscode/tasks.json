@@ -8,10 +8,10 @@
                 "-g",
                 "-o",
                 "${workspaceFolder}/build/${fileBasenameNoExtension}",
-                "${workspaceFolder}/src/main.cpp", //工作区内，执行多个关联c文件，但只有一个main()
-                "${workspaceFolder}/src/lib/*.cpp", //工作区内，执行多个关联c文件，但只有一个main()
-                "${workspaceFolder}/src/Paxos/*.cpp", //工作区内，执行多个关联c文件，但只有一个main()
-                "-lpthread",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/lib/*.cpp",
+                "${workspaceFolder}/src/Paxos/*.cpp",
+                "-lpthread", //#include <pthread.h>需要添加此编译项
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
